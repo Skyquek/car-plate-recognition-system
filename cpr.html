@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Car Plate Recognition System</title>
+    <script type="text/JavaScript" src="jquery.min.js" ></script>
+    <script src = 'cpr.js'></script>
+    <h1 style="text-align: center;">Car Plate Recognition</h1>
+    <p>This system will capture every 3 seconds</p>
+
+    <link rel='stylesheet' href='cpr.css' type='text/css'>
+</head>
+
+<body>
+    <div class='main'>
+        <div class='webcam'>
+            <p>Webcam here</p>
+            <script src="webcam.js"></script>
+            <div id="my_camera" style="width:600px; height:400px;"></div>
+        </br>
+            <button style="margin-left:180px;"onclick="javascript:void(start_cam())" id='start'>Start Streaming</button>
+            <button onclick="javascript:void(start_snapshot())" id='start'>Start Taking Snapshot</button>
+            </br></br>
+            
+            <vl></vl>
+
+                <div class='image'>
+                    <p>Image captured</p>
+                    <div class='captured'>
+                        <div id="my_result"></div>
+                        <div id="my_result1"></div>
+                        <div id="my_result2"></div>
+                    </div>
+                </div>
+        </div>
+
+        <div class='plate'>
+            <p>Number plate detected: </p>
+            <div id = 'result'></div>
+            <img src = '' id = 'plate' style="max-height:150px;width:auto">
+            <img id = 'plate_separate' src = '' style="max-height:150px;width:auto"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
